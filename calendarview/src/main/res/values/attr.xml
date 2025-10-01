@@ -1,0 +1,60 @@
+<resources>
+    <declare-styleable name="SimpleCalendarView">
+
+        <!-- General calendar background -->
+        <attr name="scv_background" format="color|reference"/>
+
+        <!-- Header (month-year bar) -->
+        <attr name="scv_headerBackground" format="color|reference"/>
+        <attr name="scv_headerTextColor" format="color|reference"/>
+        <attr name="scv_headerTextStyle" format="reference"/>
+        <attr name="scv_headerHeight" format="dimension"/>
+
+        <!-- Navigation arrows -->
+        <attr name="scv_prevIcon" format="reference"/>
+        <attr name="scv_nextIcon" format="reference"/>
+        <attr name="scv_pickerIcon" format="reference"/>
+        <attr name="scv_iconBackground" format="reference"/>
+
+        <!-- Weekday row -->
+        <attr name="scv_weekdayTextColor" format="color|reference"/>
+        <attr name="scv_weekdayTextStyle" format="reference"/>
+        <attr name="scv_weekdayBackground" format="color|reference"/>
+
+        <!-- Days -->
+        <attr name="scv_dayTextColor" format="color|reference"/>
+        <attr name="scv_dayTextStyle" format="reference"/>
+        <attr name="scv_dayBackground" format="color|reference"/>
+
+        <!-- Selected day -->
+        <attr name="scv_selectedDayColor" format="color|reference"/>
+        <attr name="scv_selectedDayBackground" format="color|reference"/>
+
+        <!-- Today -->
+        <attr name="scv_todayTextColor" format="color|reference"/>
+        <attr name="scv_todayBackground" format="reference"/>
+
+        <!-- Other month days -->
+        <attr name="scv_showOtherMonthDays" format="boolean"/>
+        <attr name="scv_otherMonthDayTextColor" format="color|reference"/>
+        <attr name="scv_otherMonthDayBackground" format="color|reference"/>
+
+        <!-- First day of week -->
+        <attr name="scv_firstDayOfWeek" format="enum">
+            <enum name="sunday" value="1"/>
+            <enum name="monday" value="2"/>
+            <enum name="tuesday" value="3"/>
+            <enum name="wednesday" value="4"/>
+            <enum name="thursday" value="5"/>
+            <enum name="friday" value="6"/>
+            <enum name="saturday" value="7"/>
+        </attr>
+
+        <!-- Weekday label format -->
+        <attr name="scv_weekdayLabelMode" format="enum">
+            <enum name="oneLetter" value="0"/>
+            <enum name="threeLetter" value="1"/>
+            <enum name="full" value="2"/>
+        </attr>
+    </declare-styleable>
+</resources>

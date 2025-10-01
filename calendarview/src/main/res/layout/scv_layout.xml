@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Header -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/scv_header"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:background="?attr/colorPrimary">
+
+            <!-- Month + Picker on Left -->
+            <TextView
+                android:id="@+id/scv_monthYear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="February 2022"
+                android:textColor="@android:color/white"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginBottom="16dp"
+                android:textAlignment="textStart"/>
+
+            <ImageView
+                android:id="@+id/scv_picker"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/ic_arrow_drop_down_24"
+                android:contentDescription="Pick month"
+                app:layout_constraintStart_toEndOf="@id/scv_monthYear"
+                app:layout_constraintTop_toTopOf="@id/scv_monthYear"
+                app:layout_constraintBottom_toBottomOf="@id/scv_monthYear"
+                android:layout_marginStart="8dp"/>
+
+            <!-- Prev + Next on Right -->
+            <ImageView
+                android:id="@+id/scv_prev"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginEnd="24dp"
+                android:contentDescription="Previous"
+                android:src="@drawable/ic_before_24"
+                app:layout_constraintBottom_toBottomOf="@+id/scv_picker"
+                app:layout_constraintEnd_toStartOf="@id/scv_next"
+                app:layout_constraintTop_toTopOf="@+id/scv_picker" />
+
+            <ImageView
+                android:id="@+id/scv_next"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginEnd="16dp"
+                android:contentDescription="Next"
+                android:src="@drawable/ic_next_24"
+                app:layout_constraintBottom_toBottomOf="@+id/scv_picker"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/scv_picker" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!-- Weekdays row -->
+        <LinearLayout
+            android:id="@+id/scv_weekdays"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginBottom="10dp"/>
+
+        <!-- Days grid -->
+        <GridLayout
+            android:id="@+id/gridDays"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="7"
+            android:rowCount="5"
+            android:useDefaultMargins="true"
+            android:alignmentMode="alignMargins"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginBottom="10dp"/>
+    </LinearLayout>
+</merge>
